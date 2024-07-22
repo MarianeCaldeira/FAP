@@ -4,27 +4,37 @@
 <head>
     <title>Tutorial de Alert em JavaScript - Linha de Código</title>
     <script>
+        let notas = []
+        let pesos = []
         function funcao1() {
-            var nota1 = parseFloat(prompt("Informe a primeira nota: "))
-            var nota2 = parseFloat(prompt("Informa a segunda nota: "))
-            var nota3 = parseFloat(prompt("Informa a terceira nota: "))
-            var nota4 = parseFloat(prompt("Informe a quarta nota: "))
+            for (let i = 0; i < 4; i++){
+                notas[i] = parseFloat(prompt('Informe a nota: '))
+            }
+            return notas
         }
 
         function funcao2()
 {
-    let peso1 = parseFloat(prompt('Insira o peso da nota 1: '))
-    let peso2 = parseFloat(prompt('Insira o peso da nota 2: '))
-    let peso3 = parseFloat(prompt('Insira o peso da nota 3: '))
-    let peso4 = parseFloat(prompt('Insira o peso da nota 4: '))
+    for (let i = 0; i < 4; i++){
+                pesos[i] = parseFloat(prompt('Informe o peso: '))
+            }
+            return pesos
 }
+
+    function funcao3 () {
+        var somanota = nota1 + nota2 + nota3 + nota4 
+        var somapeso = peso1 + peso2 + peso3 + peso4
+        var media = somanota / somapeso
+        document.write('A media é ' + media)
+    }
     </script>
 </head>
 
 <body>
 
-<input type="button" onclick="funcao2()" value="informar peso" />
 <input type="button" onclick="funcao1()" value="Informar nota" />
+<input type="button" onclick="funcao2()" value="informar peso" />
+<input type="button" onclick="funcao3()" value="Informar media" />
 
 </body>
 
